@@ -10,6 +10,7 @@ pipeline {
     stages {
         stage('Checkout') {
             steps {
+                //
                 // git 'http://github.com/tangjoe/...'
                 sh 'echo checkout sources here'
             }
