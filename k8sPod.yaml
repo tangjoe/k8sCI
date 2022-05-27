@@ -6,17 +6,34 @@ labels:
 spec:
   containers:
   - name: golang
-    image: golang:alpine3.16
+    image: localhost:32000/golang:alpine3.16
     command:
     - cat
     tty: true
   - name: maven
-    image: maven:3.8.5-openjdk-18
+    image: localhost:32000/maven:3.8.5-openjdk-18
     command:
     - cat
     tty: true
   - name: python
-    image: python:latest
+    image: localhost:32000/python:latest
     command:
     - cat
     tty: true
+  - name: kaniko
+    image: gcr.io/kaniko-project/executor:debug
+    command:
+    - sleep
+    args:
+    - 9999999
+    volumeMounts:
+    - name: kaniko-secret
+      mountPath: /kaniko/.docker
+    restartPolicy: Never
+    volumes:
+    - name: kaniko-secret
+      secret:
+          secretName: dockercred
+          items:
+          - key: .dockerconfigjson
+            path: config.json
