@@ -3,3 +3,7 @@ kubectl get secret dockercred -n devops -o yaml | \
     cut -f2 -d':' | \
     tr -d '[:blank:]'| \
     base64 -d | jq
+kubectl get secret dockercred -n devops -o yaml | \
+    grep '\.dockerconfigjson' | \
+    cut -f2 -d':' | \
+    tr -d '[:blank:]'
