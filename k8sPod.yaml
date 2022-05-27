@@ -29,11 +29,11 @@ spec:
     volumeMounts:
     - name: kaniko-secret
       mountPath: /kaniko/.docker
-    restartPolicy: Never
-    volumes:
-    - name: kaniko-secret
-      secret:
-          secretName: dockercred
-          items:
-          - key: .dockerconfigjson
-            path: config.json
+  restartPolicy: Never
+  volumes:
+  - name: kaniko-secret
+    secret:
+        secretName: dockercred
+        items:
+        - key: .dockerconfigjson
+          path: config.json
