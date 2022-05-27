@@ -37,12 +37,3 @@ spec:
           items:
           - key: .dockerconfigjson
             path: config.json
-
----
-apiVersion: v1
-kind: Secret
-metadata:
-  name: dockercred
-data:
-  .dockerconfigjson: eyJhdXRocyI6eyJodHRwczovL2luZGV4LmRvY2tlci5pby92MS8iOnsidXNlcm5hbWUiOiJ0YW5nam9lODgiLCJwYXNzd29yZCI6InBhc3N3MHJkIiwiZW1haWwiOiJ0YW5nd2Nqb2VAZ21haWwuY29tIiwiYXV0aCI6ImRHRnVaMnB2WlRnNE9uQmhjM04zTUhKayJ9fX0=
-type: kubernetes.io/dockerconfigjson
