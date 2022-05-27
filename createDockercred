@@ -1,5 +1,0 @@
-kubectl create secret -n devops docker-registry dockercred \
-    --docker-server=https://index.docker.io/v1/ \
-    --docker-username=tangjoe88 \
-    --docker-password=passw0rd \
-    --docker-email=tangwcjoe@gmail.com
