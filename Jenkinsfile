@@ -25,7 +25,7 @@ pipeline {
                 }
             }
         }
-        stage('Buid image')
+        stage('Buid image') {
             steps {
                 container('kaniko') {
                     sh """
