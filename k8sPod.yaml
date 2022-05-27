@@ -5,18 +5,8 @@ labels:
   component: ci
 spec:
   containers:
-  - name: golang
-    image: localhost:32000/golang:alpine3.16
-    command:
-    - cat
-    tty: true
   - name: maven
     image: localhost:32000/maven:3.8.5-openjdk-18
-    command:
-    - cat
-    tty: true
-  - name: python
-    image: localhost:32000/python:latest
     command:
     - cat
     tty: true
