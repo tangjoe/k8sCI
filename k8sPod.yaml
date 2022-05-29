@@ -6,7 +6,7 @@ labels:
 spec:
   containers:
   - name: maven
-    image: localhost:32000/maven:3.8.5-openjdk-18
+    image: maven:3.8.5-openjdk-18
     command:
     - cat
     tty: true
