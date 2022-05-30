@@ -29,7 +29,7 @@ pipeline {
             steps {
                 container('kaniko') {
                     sh """
-                    /kaniko/executor --context `pwd` --destination tangjoe88/helloworld:1.0
+                    /kaniko/executor --context `pwd` --destination localhost:32000/helloworld:1.0
                     """
                 }
             }
